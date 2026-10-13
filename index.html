@@ -9,7 +9,7 @@
 <body>
 <header class="site-header">
   <h1>Check Your Yoke/HOTAS Covers X-Plane 12's Cockpit Controls</h1>
-  <p class="tagline">Pick the controller you own (or are about to buy) and the aircraft class you fly — GA single-engine or airliner/jet. See how many of that class's core cockpit controls land on your stick, and which categories you'll push to keyboard.</p>
+  <p class="tagline">Pick the controller you own (or are about to buy) and the aircraft class you fly — GA single-engine, airliner/jet, or helicopter. See how many of that class's core cockpit controls land on your stick, and which categories you'll push to keyboard.</p>
 </header>
 
 <main>
@@ -23,6 +23,8 @@
       <select id="tier-select"></select>
     </div>
   </section>
+
+  <section class="unlock" id="unlock-box"></section>
 
   <section class="result">
     <h2 id="result-heading"></h2>
@@ -54,14 +56,14 @@
 
   <section class="about">
     <h2>What this counts</h2>
-    <p>"Core controls" are counted from a dated primary source per aircraft class — not X-Plane's full bindable-command list. X-Plane 12 does not publish its own consolidated per-aircraft-class control-count reference, so the counts here come from the X-Plane 12 Desktop Manual's own worked examples for flight-control button/axis assignment (pitch, roll, yaw, throttle, toe brakes, flaps, and — for the 737-800 only — landing gear) plus its full "Using the Autopilot" section for the airliner's autopilot/FMS panel. "Slots" means physical buttons, axes, and hats on the controller, counted from the manufacturer's own product page. One physical input covers one control.</p>
+    <p>"Core controls" are counted from a dated primary source per aircraft class — not X-Plane's full bindable-command list. X-Plane 12 does not publish its own consolidated per-aircraft-class control-count reference, so the counts here come from the X-Plane 12 Desktop Manual's own worked examples for flight-control button/axis assignment (pitch, roll, yaw, throttle, toe brakes, flaps, and — for the 737-800 only — landing gear) plus its full "Using the Autopilot" section for the airliner's autopilot/FMS panel. The helicopter class's counts come instead from the FAA's own Helicopter Flying Handbook, since X-Plane's manual section on helicopters could not be fetched intact. "Slots" means physical buttons, axes, and hats on the controller, counted from the manufacturer's own product page. One physical input covers one control.</p>
     <p>This tool reports counts. It does not tell you a controller is required, sufficient, or the best choice for X-Plane — that judgment is yours.</p>
   </section>
 
   <section class="about">
     <h2>Controllers and aircraft classes covered</h2>
-    <p>Controllers: Thrustmaster T.16000M FCS, T.16000M FCS HOTAS, T.Flight HOTAS X, T.16000M FCS Space Sim Duo. Aircraft classes: GA Single-Engine (Cessna 172SP), Airliner/Jet (Boeing 737-800) — both X-Plane 12 default aircraft.</p>
-    <p>A helicopter class (Robinson R22) is not included this pass — the Desktop Manual's "Flying Helicopters" section could not be read in full within this build's research budget, and an honest smaller tool beats a guessed-at one. Honeycomb Alpha, Logitech X56, and VKB Gladiator were researched and dropped for the same reason: no current manufacturer page states a clean total count.</p>
+    <p>Controllers: Thrustmaster T.16000M FCS, T.16000M FCS HOTAS, T.Flight HOTAS X, T.16000M FCS Space Sim Duo, T-Flight HOTAS 4, Turtle Beach VelocityOne Flightstick. Aircraft classes: GA Single-Engine (Cessna 172SP) and Airliner/Jet (Boeing 737-800), both X-Plane 12 default aircraft, plus Helicopter (Robinson R22 Beta II) — also an X-Plane 12 default, with control counts from the FAA's own Helicopter Flying Handbook since X-Plane's manual would not fetch intact.</p>
+    <p>Honeycomb Alpha, Logitech X56, VKB Gladiator/Gunfighter, Thrustmaster HOTAS Warthog, TCA Yoke/Sidestick, Sol-R 4 HOTAS, and Logitech X52 Pro were all researched and dropped: no current manufacturer page states a clean, consolidated buttons/axes/hats total for any of them, and an honest smaller tool beats a guessed-at one.</p>
   </section>
 </main>
 
@@ -70,6 +72,7 @@
 </footer>
 
 <script src="data.js"></script>
+<script src="license.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
