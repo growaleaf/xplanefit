@@ -28,6 +28,17 @@
 // Sol-R 4 HOTAS (states "up to 58 actions" but decomposed across categorically different input
 // types — pads, switches, a rotary knob, a selector — that don't map onto this tool's
 // buttons/axes/hats schema without guessing which count as which).
+//
+// 2026-11-04 pass (WA-6 charter, controller expansion round 1): Logitech X56 re-checked a third
+// time. Dropped 2026-10-08 because the live page then stated only "189 programmable controls"
+// with no breakdown. Re-verified independently today, twice: an HTML-to-markdown fetch of
+// https://www.logitechg.com/en-us/shop/p/x56-space-flight-vr-simulator-controller still only
+// surfaced the bare "189 programmable controls" line (the breakdown lives in a client-rendered
+// "Key features" card that the markdown conversion did not expand) — so a second check, a raw
+// curl of the same URL with the embedded feature-card JSON read directly, confirmed the page's
+// script payload states: title "189+ PROGRAMMABLE CONTROLS", description "Customize all 13 axes,
+// 5 HATS, and 31 programmable buttons over three modes." Added below with that quote as the
+// source — not reused from StukaFit/ViperFit's older citation of the same figure.
 const CONTROLLERS = [
   {
     id: "t16000m-fcs",
@@ -96,6 +107,18 @@ const CONTROLLERS = [
     tier: "pro",
     sources: [
       { label: "Turtle Beach — VelocityOne Flightstick product page, fetched 2026-10-13: \"27 Programmable Buttons, 8 Axes, POV Hat & Rapid-Fire Trigger\"", url: "https://www.turtlebeach.com/products/velocity-one-flight-stick" }
+    ]
+  },
+  {
+    id: "logitech-x56",
+    name: "Logitech G X56 H.O.T.A.S.",
+    note: "joystick + throttle, includes thumb mini-sticks",
+    buttons: 31,
+    axes: 13,
+    hats: 5,
+    tier: "pro",
+    sources: [
+      { label: "Logitech G — X56 H.O.T.A.S. product page, re-fetched 2026-11-04 (raw page payload, \"Key features\" card — not rendered by a plain HTML-to-text pass, confirmed via direct fetch of the page's own embedded data): title \"189+ PROGRAMMABLE CONTROLS\", description \"Customize all 13 axes, 5 HATS, and 31 programmable buttons over three modes.\"", url: "https://www.logitechg.com/en-us/shop/p/x56-space-flight-vr-simulator-controller" }
     ]
   }
 ];
