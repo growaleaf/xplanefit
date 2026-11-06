@@ -39,6 +39,16 @@
 // script payload states: title "189+ PROGRAMMABLE CONTROLS", description "Customize all 13 axes,
 // 5 HATS, and 31 programmable buttons over three modes." Added below with that quote as the
 // source — not reused from StukaFit/ViperFit's older citation of the same figure.
+//
+// 2026-11-06 pass (WA-6 charter, controller expansion round 2): Logitech G Flight Yoke System
+// added, free tier (no `tier` field, matching this same controller's free entry in the sibling
+// product MSFSFit's data.js). Re-fetched secure.logitech.com myself rather than copying
+// MSFSFit's cached numbers blind (Principle XXII) — the live page's Description section states
+// "The Logitech Flight Yoke System features five total axes ... and 25 fully programmable
+// buttons and switch positions," and its Programmable Options section separately confirms
+// "the Yoke and Quadrant have 25 buttons and switch positions." No hat/PoV switch is named
+// anywhere on the page, so hats is counted as 0 rather than guessed — same reconciliation
+// MSFSFit already uses for this controller, independently re-confirmed today, not assumed.
 const CONTROLLERS = [
   {
     id: "t16000m-fcs",
@@ -119,6 +129,17 @@ const CONTROLLERS = [
     tier: "pro",
     sources: [
       { label: "Logitech G — X56 H.O.T.A.S. product page, re-fetched 2026-11-04 (raw page payload, \"Key features\" card — not rendered by a plain HTML-to-text pass, confirmed via direct fetch of the page's own embedded data): title \"189+ PROGRAMMABLE CONTROLS\", description \"Customize all 13 axes, 5 HATS, and 31 programmable buttons over three modes.\"", url: "https://www.logitechg.com/en-us/shop/p/x56-space-flight-vr-simulator-controller" }
+    ]
+  },
+  {
+    id: "logitech-flight-yoke",
+    name: "Logitech G Flight Yoke System",
+    note: "yoke + throttle quadrant bundle (Saitek heritage). The live page states \"25 fully programmable buttons and switch positions\" as one combined figure, not a separate buttons/switches breakdown, and does not name a hat/PoV switch anywhere on the page — this entry counts the 25 as buttons and hats as 0 rather than guessing at a breakdown the page does not state.",
+    buttons: 25,
+    axes: 5,
+    hats: 0,
+    sources: [
+      { label: "Logitech — Flight Yoke System product page (secure.logitech.com, model 945-000023), fetched 2026-11-06: \"The Logitech Flight Yoke System features five total axes, stainless steel elevator and aileron control shaft, and 25 fully programmable buttons and switch positions.\" Programmable Options section separately: \"While the Yoke and Quadrant have 25 buttons and switch positions, the Yoke features a three-position switch...\"", url: "https://secure.logitech.com/en-us/shop/p/flight-simulator-yoke-system.945-000023" }
     ]
   }
 ];
