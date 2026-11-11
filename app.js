@@ -102,7 +102,7 @@ function populateSelect(select, items, nameKey) {
   });
 }
 
-const PRO_PAYMENT_LINK_URL = "https://buy.stripe.com/00w4gB3Yc1TP2F68X9frW39";
+const PRO_PAYMENT_LINK_URL = "https://buy.stripe.com/3cIdR99aE6FF7ZK72T0kE1B";
 
 function isPro(item) {
   return item.tier === "pro";
